@@ -1,0 +1,247 @@
+.about{
+    background-color: #eff4ff;
+    height: auto;
+    display: flex;
+
+   place-content: center;
+
+   
+}
+.all{
+    background-color: #eff4ff;
+    height: 100vh;
+    width: 100vw;
+   
+        max-width: 100%;
+        overflow-x: hidden;
+      
+      
+}
+.mahie-photo{
+    width: 10%;
+    border-radius: 50%;
+    margin-top: 70px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+    .mahie-content {
+        display: flex;
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;     /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+           
+    }
+    
+    .mahie-name {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    
+    .mahie-title {
+        font-size: 24px; /* Adjust size as needed */
+        font-weight: 400;
+        color: #2563eb;
+        margin-bottom: 25px;
+    }
+    .mahie-content{
+        font: 18px;
+        font-weight: 400;
+        margin-top: -15px;
+    }
+    
+
+
+
+
+    .mahie-content {
+        display: flex;
+        flex-direction: column;  
+        align-items: center;     
+        justify-content: center; 
+        text-align: center;
+    }
+    
+    .mahie-name {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    
+    .mahie-title {
+        font-size: 24px; 
+        font-weight: 400;
+        color: #2563eb;
+    }
+    
+    .mahie-about, .mahie-2about {
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: -15px;
+    }
+    
+    /* Social Icons Container */
+    .mahie-icons {
+        display: flex;
+        gap: 15px; /* Spacing between icons */
+        margin-top: 15px;
+    }
+    
+    /* Social Icons */
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 30%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    /* Hover Effect */
+    .social-icon:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .resume-btn {
+        background-color: #007bff; /* Bootstrap primary blue */
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Space between icon and text */
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    /* Hover Effect */
+    .resume-btn:hover {
+        background-color: #0056b3; /* Darker blue */
+        transform: scale(1.05);
+    }
+    
+    /* Bootstrap Icon Styling */
+    .resume-btn i {
+        font-size: 20px;
+    }
+    .resume-container {
+        margin-top: 20px; /* Adjust spacing */
+    }
+    @media (max-width: 768px) {
+        /* Increase image size by 50% */
+        .mahie-photo {
+            width: 15%; /* 50% increase from original 10% */
+        }
+    
+        /* Mahie content */
+        .mahie-content {
+            text-align: center;
+        }
+    
+        /* Each part of the description should be displayed with a delay */
+        .mahie-description p {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+            margin: 10px 0;
+        }
+    
+        .mahie-description p:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .mahie-description p:nth-child(2) {
+            animation-delay: 1s;
+        }
+        
+        .mahie-description p:nth-child(3) {
+            animation-delay: 2s;
+        }
+        
+        .mahie-description p:nth-child(4) {
+            animation-delay: 3s;
+        }
+    
+        /* Animation to fade in and slide up */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        /* Hide second and third paragraphs initially */
+        .mahie-2about {
+            display: none;
+        }
+    }
+  /* Base styles for description text */
+.mahie-description p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* Web (Desktop) - Text in Two Lines */
+@media (min-width: 768px) {
+    .mahie-description p {
+        width: 70%; /* Centered width */
+        margin: 0 auto;
+        opacity: 1; /* Ensure text is visible */
+        transform: none; /* No animation on web */
+    }
+}
+
+/* Mobile (Below 768px) */
+@media (max-width: 768px) {
+    .mahie-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Apply animation for mobile only */
+    .mahie-description p {
+        opacity: 0; /* Initially hidden */
+        transform: translateY(20px);
+        animation: fadeIn 1s ease-out forwards;
+    }
+
+    /* First Line */
+    .mahie-description p:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    /* Second Line */
+    .mahie-description p:nth-child(2) {
+        animation-delay: 1s;
+    }
+
+    /* Third Line */
+    .mahie-description p:nth-child(3) {
+        animation-delay: 2s;
+    }
+
+    /* Fourth Line */
+    .mahie-description p:nth-child(4) {
+        animation-delay: 3s;
+    }
+
+    /* Keyframes for fade-in animation */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
