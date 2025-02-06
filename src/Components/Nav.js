@@ -10,8 +10,10 @@ import contact from '../Images/envelope (1).svg';
 import code from '../Images/code (1).png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { GiHamburgerMenu } from 'react-icons/gi';  // Import the Hamburger icon
+import { useNavigate } from 'react-router-dom';
 
 function Nav() {
+  let nav=useNavigate()
   // OffCanvas component to handle the mobile menu
   function OffCanvasExample({ name, ...props }) {
     const [show, setShow] = useState(false);
@@ -30,11 +32,11 @@ function Nav() {
           <Offcanvas.Header closeButton />
           <Offcanvas.Body>
             <div>
-              <p>About</p>
-              <p>Projects</p>
-              <p>Skills</p>
-              <p>Education</p>
-              <p>Contact Me</p>
+              <p onClick={() => nav('/About')}>About</p>
+              <p onClick={() => nav('/Project')}>Projects</p>
+              <p onClick={() => nav('/Skills')}>Skills</p>
+              <p onClick={() => nav('/Education')}>Education</p>
+              <p onClick={() => nav('/Contact')}>Contact Me</p>
             </div>
           </Offcanvas.Body>
         </Offcanvas>
@@ -51,11 +53,11 @@ function Nav() {
           </h3>
         </div>
         <div className="nav-links">
-          <h5 className="nav-links1"><img src={user} alt="user" />About</h5>
-          <h5 className="nav-links2"><img src={bag} alt="projects" />Projects</h5>
-          <h5 className="nav-links3"><img src={skill} alt="skills" />Skills</h5>
-          <h5 className="nav-links3"><img src={education} alt="education" />Education</h5>
-          <h5 className="nav-links4"><img src={contact} alt="contact" />Contact</h5>
+          <h5 className="nav-links1" onClick={() => nav('/About')}><img src={user} alt="user" />About</h5>
+          <h5 className="nav-links2" onClick={() => nav('/Project')}><img src={bag} alt="projects" />Projects</h5>
+          <h5 className="nav-links3" onClick={() => nav('/Skills')}> <img src={skill} alt="skills" />Skills</h5>
+          <h5 className="nav-links3" onClick={() => nav('/Education')}><img src={education} alt="education" />Education</h5>
+          <h5 className="nav-links4"onClick={() => nav('/Contact')}><img src={contact} alt="contact" />Contact</h5>
         </div>
         
         {/* Mobile navigation with hamburger menu */}
