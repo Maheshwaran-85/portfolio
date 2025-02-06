@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Components/About';
@@ -10,19 +9,17 @@ import Contact from './Components/Contact';
 
 function App() {
   return (
-    <>
-    <Nav/>
-  
-    <Routes>
-     <Route path='/About'element={<About/>}>  </Route>  
-     <Route path='/Project'element={<Project/>}>  </Route>  
-     <Route path='/Skill'element={<Skill/>}>  </Route>
-     <Route path='/Education'element={<Education/>}>  </Route>
-     <Route path='/Contact'element={<Contact/>}>  </Route>
-     </Routes>
- 
-    
-    </>
+<>
+      <Nav /> 
+      
+      <Routes>
+        <Route path='/About' element={<About />} />
+        <Route path='/Project' element={<Project />} />
+        <Route path='/Skill' element={<Skill />} />
+        <Route path='/Education' element={<Education />} />
+        <Route path='/Contact' element={<Contact />} />
+      </Routes>
+      </>
   );
 }
 

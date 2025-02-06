@@ -13,7 +13,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';  // Import the Hamburger icon
 import { useNavigate } from 'react-router-dom';
 
 function Nav() {
-  let nav=useNavigate()
+  const nav = useNavigate();
+
   // OffCanvas component to handle the mobile menu
   function OffCanvasExample({ name, ...props }) {
     const [show, setShow] = useState(false);
@@ -32,11 +33,11 @@ function Nav() {
           <Offcanvas.Header closeButton />
           <Offcanvas.Body>
             <div>
-              <p onClick={() => nav('/About')}>About</p>
-              <p onClick={() => nav('/Project')}>Projects</p>
-              <p onClick={() => nav('/Skills')}>Skills</p>
-              <p onClick={() => nav('/Education')}>Education</p>
-              <p onClick={() => nav('/Contact')}>Contact Me</p>
+              <p onClick={() => { nav('/About'); handleClose(); }}>About</p>
+              <p onClick={() => { nav('/Project'); handleClose(); }}>Projects</p>
+              <p onClick={() => { nav('/Skill'); handleClose(); }}>Skills</p> {/* Changed from Skills to Skill */}
+              <p onClick={() => { nav('/Education'); handleClose(); }}>Education</p>
+              <p onClick={() => { nav('/Contact'); handleClose(); }}>Contact Me</p>
             </div>
           </Offcanvas.Body>
         </Offcanvas>
@@ -53,11 +54,21 @@ function Nav() {
           </h3>
         </div>
         <div className="nav-links">
-          <h5 className="nav-links1" onClick={() => nav('/About')}><img src={user} alt="user" />About</h5>
-          <h5 className="nav-links2" onClick={() => nav('/Project')}><img src={bag} alt="projects" />Projects</h5>
-          <h5 className="nav-links3" onClick={() => nav('/Skills')}> <img src={skill} alt="skills" />Skills</h5>
-          <h5 className="nav-links3" onClick={() => nav('/Education')}><img src={education} alt="education" />Education</h5>
-          <h5 className="nav-links4"onClick={() => nav('/Contact')}><img src={contact} alt="contact" />Contact</h5>
+          <h5 className="nav-links1" onClick={() => nav('/About')}>
+            <img src={user} alt="user" />About
+          </h5>
+          <h5 className="nav-links2" onClick={() => nav('/Project')}>
+            <img src={bag} alt="projects" />Projects
+          </h5>
+          <h5 className="nav-links3" onClick={() => nav('/Skill')}> {/* Changed from /Skills to /Skill */}
+            <img src={skill} alt="skills" />Skills
+          </h5>
+          <h5 className="nav-links3" onClick={() => nav('/Education')}>
+            <img src={education} alt="education" />Education
+          </h5>
+          <h5 className="nav-links4" onClick={() => nav('/Contact')}>
+            <img src={contact} alt="contact" />Contact
+          </h5>
         </div>
         
         {/* Mobile navigation with hamburger menu */}
