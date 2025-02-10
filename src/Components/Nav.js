@@ -48,29 +48,32 @@ function Nav() {
   return (
     <>
       <div className='web-nav'>
-        <div className="nav-container">
-          <h3 className='portfolio-nav'>
-            <img src={code} alt="portfolio logo" />Portfolio
-          </h3>
+        <div>
+          <div className="nav-container">
+            <h3 className='portfolio-nav'>
+              <img src={code} alt="portfolio logo" />Portfolio
+            </h3>
+          </div>
+          <div className="nav-links">
+            <h5 className="nav-links1" onClick={() => nav('/About')}>
+              <img src={user} alt="user" />
+              <span className='text-Navbar'>About</span>
+            </h5>
+            <h5 className="nav-links1" onClick={() => nav('/Project')}>
+              <img src={bag} alt="projects" />Projects
+            </h5>
+            <h5 className="nav-links1" onClick={() => nav('/Skill')}> {/* Changed from /Skills to /Skill */}
+              <img src={skill} alt="skills" />Skills
+            </h5>
+            <h5 className="nav-links1" onClick={() => nav('/Education')}>
+              <img src={education} alt="education" />Education
+            </h5>
+            <h5 className="nav-links2" onClick={() => nav('/Contact')}>
+              <img src={contact} alt="contact" />Contact
+            </h5>
+          </div>
         </div>
-        <div className="nav-links">
-          <h5 className="nav-links1" onClick={() => nav('/About')}>
-            <img src={user} alt="user" />About
-          </h5>
-          <h5 className="nav-links2" onClick={() => nav('/Project')}>
-            <img src={bag} alt="projects" />Projects
-          </h5>
-          <h5 className="nav-links3" onClick={() => nav('/Skill')}> {/* Changed from /Skills to /Skill */}
-            <img src={skill} alt="skills" />Skills
-          </h5>
-          <h5 className="nav-links3" onClick={() => nav('/Education')}>
-            <img src={education} alt="education" />Education
-          </h5>
-          <h5 className="nav-links4" onClick={() => nav('/Contact')}>
-            <img src={contact} alt="contact" />Contact
-          </h5>
-        </div>
-        
+
         {/* Mobile navigation with hamburger menu */}
         <div className='mobile-nav'>
           {['end'].map((placement, idx) => (

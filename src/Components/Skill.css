@@ -1,4 +1,57 @@
-.a1{
+/* Container */
+.card-container {
     display: flex;
-    background-color: aquamarine;
-}
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Card Styling */
+  .html-card {
+    width: 220px;
+    height: 200px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover Animation */
+  .html-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+  
+  /* Icon Styling */
+  .html-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Text Styling */
+  .html-title {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  /* Change Text Color on Hover */
+  .html-card:hover .html-title {
+    color: white;
+  }
+  
+  .html-card:hover .html-icon {
+    transform: scale(1.1);
+  }
+  

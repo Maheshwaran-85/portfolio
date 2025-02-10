@@ -84,14 +84,22 @@ justify-content: space-around;
    /* Nav.css */
 /* Styling for the navigation container */
 /* Styling for the navigation container */
+
+.nav-Main-Conatiner{
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 .nav-container {
   display: flex;
   flex-direction: row;
-  justify-content: left;
- 
+  justify-content:space-between;
   height: 64px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  box-shadow:      #eff4ff; 
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1); 
+ /* / box-shadow:      #eff4ff;  */
 }
 
 
@@ -100,16 +108,14 @@ justify-content: space-around;
 }
 
 
-
-
 .nav-links {
   display: flex;
-  justify-content: center;
-  padding-left: 700px;
+  justify-content: end;
+  padding-left: auto;
   flex-direction: row;
   margin-top: -50px;
-  padding-bottom: 20px;
- 
+  /* padding-bottom: 20px;
+  */
 }
 
 .nav-links1, .nav-links2, .nav-links3, .nav-links4 {
@@ -135,7 +141,7 @@ justify-content: space-around;
 .nav-links1 {
   padding-left: 10px; 
   margin-right: 40px;
- 
+
 }
 
 .nav-links2 {
@@ -143,7 +149,7 @@ justify-content: space-around;
   margin-right: 40px;
 }
 
-.nav-links3 {
+/* .nav-links3 {
   padding-left: 10px;
   margin-right: 40px;
 }
@@ -151,7 +157,7 @@ justify-content: space-around;
 .nav-links4 {
   padding-left: 10px; 
   margin-right: 40px;
-}
+} */
 
 
 .mobile-nav {
@@ -166,6 +172,12 @@ justify-content: space-around;
 .portfolio-nav img{
   width: 25px;
   
+}
+@media screen and (max-width: 1000px) {
+
+  .text-Navbar{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
