@@ -60,16 +60,17 @@ function Nav() {
               <span className='text-Navbar'>About</span>
             </h5>
             <h5 className="nav-links1" onClick={() => nav('/Project')}>
-              <img src={bag} alt="projects" />Projects
+              <img src={bag} alt="projects" /> 
+              <span className='text-Navbar'>Projects</span>
             </h5>
             <h5 className="nav-links1" onClick={() => nav('/Skill')}> {/* Changed from /Skills to /Skill */}
-              <img src={skill} alt="skills" />Skills
+              <img src={skill} alt="skills" /> <span className='text-Navbar'>Skills</span>
             </h5>
             <h5 className="nav-links1" onClick={() => nav('/Education')}>
-              <img src={education} alt="education" />Education
+              <img src={education} alt="education" /> <span className='text-Navbar'>Education</span>
             </h5>
             <h5 className="nav-links2" onClick={() => nav('/Contact')}>
-              <img src={contact} alt="contact" />Contact
+              <img src={contact} alt="contact" /> <span className='text-Navbar'>Contact</span>
             </h5>
           </div>
         </div>

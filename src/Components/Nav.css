@@ -98,7 +98,7 @@ justify-content: space-around;
   flex-direction: row;
   justify-content:space-between;
   height: 64px;
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1); 
  /* / box-shadow:      #eff4ff;  */
 }
 
@@ -173,14 +173,14 @@ justify-content: space-around;
   width: 25px;
   
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
 
   .text-Navbar{
     display: none;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 676px) {
   .portfolio-nav{
    margin-left: 20px;
   }

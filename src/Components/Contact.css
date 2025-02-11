@@ -1,0 +1,97 @@
+/* Overall Layout */
+.contact-container {
+    background: linear-gradient(135deg, #4A90E2, #76B3FA); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Title */
+.contact-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contact Card */
+.contact-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Contact Items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Icons */
+.icon {
+    font-size: 24px;
+}
+
+/* Icon Colors */
+.linkedin {
+    color: #0e76a8;
+}
+
+.github {
+    color: #ffffff;
+}
+
+.email {
+    color: #ea4335;
+}
+
+.phone {
+    color: #34a853;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-card {
+        width: 100%;
+    }
+
+    .contact-title {
+        font-size: 24px;
+    }
+
+    .contact-item {
+        font-size: 16px;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+}
