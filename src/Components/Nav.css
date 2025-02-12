@@ -123,6 +123,7 @@ justify-content: space-around;
   display: flex;
   align-items: center; 
   padding: 10px; 
+  color: black;
 }
 
 .nav-links1:hover, .nav-links2:hover, .nav-links3:hover, .nav-links4:hover {

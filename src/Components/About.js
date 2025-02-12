@@ -21,7 +21,6 @@ function About() {
           </p>
         </div>
 
-        {/* Social Icons */}
         <div className="mahie-icons">
           <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
             <img src={git} alt="GitHub" className="social-icon" />
@@ -34,7 +33,7 @@ function About() {
           </a>
         </div>
 
-        {/* Download Button */}
+
         <div className="resume-container">
           <button className="resume-btn">
             <i className="bi bi-download"></i> Download Resume

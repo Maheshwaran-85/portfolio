@@ -1,6 +1,23 @@
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Overall Layout */
 .contact-container {
-    background: linear-gradient(135deg, #4A90E2, #76B3FA); 
+    background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=1600') no-repeat center center/cover;
+    background: linear-gradient(270deg, #4A90E2, #1E3A8A);
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,29 +26,90 @@
     color: #fff;
     padding: 50px 20px;
     text-align: center;
+    overflow: hidden;
+
+    /* Apply fade-in animation */
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating Animated Icons */
+.contact-container::before, .contact-container::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: floatAnimation 6s infinite alternate ease-in-out;
+}
+
+.contact-container::before {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.contact-container::after {
+    bottom: 10%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+/* Floating Animation */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); opacity: 0.8; }
+    100% { transform: translateY(-20px); opacity: 1; }
 }
 
 /* Title */
 .contact-title {
-    font-size: 28px;
+    font-size: 34px;
     font-weight: bold;
     margin-bottom: 30px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    backdrop-filter: blur(5px);
+    padding: 10px 25px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+
+    /* Fade-in effect with slight delay */
+    animation: fadeIn 2s ease-out 0.5s both;
 }
 
 /* Contact Card */
 .contact-card {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
     width: 90%;
-    max-width: 400px;
+    max-width: 420px;
+    transition: all 0.5s ease-in-out;
+
+    /* Fade-in effect with longer delay */
+    animation: fadeIn 2s ease-out 1s both;
+}
+
+/* Hover Effect for Contact Card */
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px);
 }
 
 /* Contact Items */
@@ -44,54 +122,65 @@
     font-weight: bold;
     text-decoration: none;
     color: white;
-    padding: 10px;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
+    padding: 14px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* Individual item fade-in with staggered delay */
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
 }
+
+/* Delay each item for a smooth entrance */
+.contact-item:nth-child(1) { animation-delay: 1.2s; }
+.contact-item:nth-child(2) { animation-delay: 1.4s; }
+.contact-item:nth-child(3) { animation-delay: 1.6s; }
+.contact-item:nth-child(4) { animation-delay: 1.8s; }
 
 /* Hover Effect */
 .contact-item:hover {
     background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-3px);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
 }
 
 /* Icons */
 .icon {
-    font-size: 24px;
+    font-size: 28px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Glowing Icons */
+.contact-item:hover .icon {
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 10px white);
 }
 
 /* Icon Colors */
-.linkedin {
-    color: #0e76a8;
-}
-
-.github {
-    color: #ffffff;
-}
-
-.email {
-    color: #ea4335;
-}
-
-.phone {
-    color: #34a853;
-}
+.linkedin { color: #0e76a8; }
+.github { color: #ffffff; }
+.email { color: #ffdd57; }
+.phone { color: #34a853; }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     .contact-card {
         width: 100%;
+        padding: 20px;
     }
 
     .contact-title {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .contact-item {
         font-size: 16px;
+        padding: 10px;
     }
 
     .icon {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
