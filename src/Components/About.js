@@ -1,44 +1,38 @@
-import React from 'react'
-import './About.css'
-import mahie from '../Images/IMG_20230710_134704.jpg'
-import git from '../Images/github.svg'
-import mail from'../Images/envelope (1).svg'
-import link from '../Images/linkedin.svg'
+import React from 'react';
+import './About.css';
+import profilePhoto from '../Images/IMG_20230710_134704.jpg';
+import githubIcon from '../Images/github.svg';
+import linkedinIcon from '../Images/linkedin.svg';
+import mailIcon from '../Images/envelope (1).svg';
 
 function About() {
   return (
-    <div className='all'>
-      <div className='about'>
-        <img src={mahie} alt='mahie' className='mahie-photo' />
+    <div className="hero-section">
+      <div className="profile-photo-wrapper">
+        <img src={profilePhoto} alt="Profile" className="profile-photo" />
       </div>
-      <div className="mahie-content">
-        <h1 className="mahie-name">Maheshwaran V</h1>
-        <h2 className="mahie-title">Full Stack Developer</h2>
-        <div className="mahie-description">
-          <p className="mahie-about">
-            Passionate about creating beautiful,responsive, and  user - friendly web applications.
-             In React, Node.js, and modern web technologies.
-          </p>
-        </div>
-
-        <div className="mahie-icons">
-          <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
-            <img src={git} alt="GitHub" className="social-icon" />
-          </a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-            <img src={link} alt="LinkedIn" className="social-icon" />
-          </a>
-          <a href="mailto:your-email@example.com">
-            <img src={mail} alt="Email" className="social-icon" />
-          </a>
-        </div>
-
-
-        <div className="resume-container">
-          <button className="resume-btn">
-            <i className="bi bi-download"></i> Download Resume
-          </button>
-        </div>
+      <h1 className="name">Maheshwaran V</h1>
+      <p className="description">Aspiring MERN Stack Developer with a strong foundation in web development. Passionate about learning, building,<br/> and growing through hands-on projects. Excited to collaborate and contribute. Let’s connect!</p>
+      
+      <div className="social-icons">
+        <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer" className="icon-border">
+          <img src={githubIcon} alt="GitHub" className="icon" />
+        </a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="icon-border">
+          <img src={linkedinIcon} alt="LinkedIn" className="icon" />
+        </a>
+        <a href="mailto:your-email@example.com" className="icon-border">
+          <img src={mailIcon} alt="Email" className="icon" />
+        </a>
+      </div>
+      
+      <div className="action-buttons">
+        <button className="primary-btn">
+          <i className="bi bi-download"></i> Download Resume
+        </button>
+        <button className="primary-btn">
+          <i className="bi bi-chat"></i> Get in Touch
+        </button>
       </div>
     </div>
   );

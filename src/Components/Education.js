@@ -47,7 +47,7 @@ function Education() {
       <div className="education-card">
         <h3>Web Development Internship</h3>
         <a href="https://www.elevadosoftwares.com/" target="_blank" rel="noopener noreferrer">
-          Elevado Softwares 
+          GT Softwares 
         </a>
         <div className="education-details">
           <span>
