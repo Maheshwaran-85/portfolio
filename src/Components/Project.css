@@ -1,85 +1,166 @@
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch; /* Ensures equal height */
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
-  
-  .project-card {
-    background: rgb(255, 255, 255);
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
-    flex: 1 1 calc(33.333% - 2rem);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .project-info {
-    flex-grow: 1; /* Pushes content down */
-  }
-  
-  .project-image {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .read-more-toggle {
-    color: #007bff;
-    cursor: pointer;
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-  }
-  
-  .project-full-text {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
-  
-  .project-card.expanded .project-full-text {
-    max-height: 500px; /* Adjust this based on content */
-  }
-  .section-title,
-.section-subtitle {
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  color: black;
-}
+/* General Styles */
 .projects-section {
-    text-align: center;
-    display: flex;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
+}
+
+/* Titles */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1 1 calc(33.333% - 2rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 380px;
+  max-height: 450px;
+}
+
+.project-card.expanded {
+  max-height: 500px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Image */
+.project-image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 180px;
+}
+
+/* Project Info */
+.project-info {
+  flex-grow: 1;
+  text-align: left;
+  padding-top: 1rem;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Read More (Text Link Style) */
+.read-more-toggle {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.read-more-toggle:hover {
+  text-decoration: underline;
+}
+
+/* Expandable Text */
+.project-full-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.project-card.expanded .project-full-text {
+  max-height: 150px;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+/* Tags (Smaller & Subtle) */
+.project-tags {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.tag {
+  background: #e3f2fd;
+  color: #007bff;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 1px solid #b3e5fc;
+}
+
+/* GitHub Icon */
+.project-links {
+  margin-top: 15px;
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.github-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .project-card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
   }
-  
-  
-  @media (max-width: 1024px) {
-    .projects-container {
-      flex-wrap: wrap;
-    }
-    .project-card {
-      flex: 1 1 calc(50% - 2rem); /* 2 cards per row on medium screens */
-    }
+
+  .project-card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
-  
-  @media (max-width: 768px) {
-    .project-card {
-      flex: 1 1 100%; /* 1 card per row on small screens */
-    }
-  }
-  
+}

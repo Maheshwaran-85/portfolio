@@ -5,6 +5,7 @@ import githubIcon from '../Images/github.svg';
 import linkedinIcon from '../Images/linkedin.svg';
 import mailIcon from '../Images/envelope (1).svg';
 
+
 function About() {
   return (
     <div className="hero-section">
