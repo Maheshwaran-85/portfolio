@@ -4,8 +4,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    background: rgb(255, 255, 255);
+    height: 99vh;
+    background: linear-gradient(270deg, #4A90E2, #1E3A8A);
     text-align: center;
     padding: 20px;
 }
@@ -34,14 +34,14 @@
 .name {
     font-size: 42px;
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin-top: 20px;
 }
 
 /* Description */
 .description {
     font-size: 18px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin-top: 10px;
     max-width: 80%;
     line-height: 1.6;
@@ -149,7 +149,7 @@
 
 @media (max-width: 768px) {  /* Mobile Styles */
     .hero-section {
-        height: auto;
+        height: 100vh;
         padding: 50px 10px;
     }
 
@@ -186,4 +186,51 @@
         align-items: center;
         gap: 10px;
     }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.profile-photo-wrapper,
+.name,
+.description,
+.social-icons,
+.action-buttons {
+    animation: fadeIn 1.5s ease-in-out;
+    opacity: 0; /* Ensure they're initially hidden */
+    animation-fill-mode: forwards; /* Maintain the final state after animation */
+}
+
+.profile-photo-wrapper {
+    animation-delay: 0.2s; /* Delay for better effect */
+}
+
+.name {
+    animation-delay: 0.4s;
+}
+
+.description {
+    animation-delay: 0.6s;
+}
+
+.social-icons {
+    animation-delay: 0.8s;
+}
+
+.action-buttons {
+    animation-delay: 1s;
 }

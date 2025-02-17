@@ -6,7 +6,7 @@ import githubIcon from "../Images/github.svg";
 import vechile from "../Images/iStock-628095858.jpg.thumb.1280.1280.png";
 import ola from '../Images/Screenshot (17).png'
 import facebook from '../Images/fb-new-login.png'
-import protfolio from '../Images/Screenshot (44).png'
+import ecom from '../Images/what-is-e-commerce-SOCIAL.jpg'
 import todo from '../Images/Screenshot (45).png'
 
 function Project() {
@@ -27,6 +27,7 @@ function Project() {
   };
 
   return (
+    <>
     <section className="projects-section">
       <h2 className="section-title">My Projects</h2>
       <p className="section-subtitle">A selection of my recent work</p>
@@ -88,7 +89,7 @@ function Project() {
 
         {/* Project 3 */}
         <div className={`project-card ${isExpanded3 ? "expanded" : ""}`}>
-          <img src={vechile} alt="E-Commerce" className="project-image" />
+          <img src={ecom} alt="E-Commerce" className="project-image" />
           <div className="project-info">
             <h3>E-Commerce</h3>
             <p>A full-stack e-commerce platform built with React and using Fake Store API.</p>
@@ -105,7 +106,7 @@ function Project() {
               <span className="tag">Fake Store API</span>
             </div>
             <div className="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Maheshwaran-85"  target="_blank" rel="noopener noreferrer">
                 <img src={githubIcon} alt="GitHub" className="github-icon" />
               </a>
             </div>
@@ -141,7 +142,7 @@ function Project() {
            
             </div>
             <div className="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Maheshwaran-85/Clone-ola-cabs"target="_blank" rel="noopener noreferrer">
                 <img src={githubIcon} alt="GitHub" className="github-icon" />
               </a>
             </div>
@@ -175,21 +176,24 @@ function Project() {
 
         {/* Project 3 */}
         <div className={`project-card ${isExpanded3 ? "expanded" : ""}`}>
-          <img src={protfolio} alt="E-Commerce" className="project-image" />
+          <img src={todo} alt="E-Commerce" className="project-image" />
           <div className="project-info">
-            <h3>Personal Portfolio:
+            <h3>To-Do List :
             </h3>
-            <p>I created a professional portfolio website to showcase my skills, projects, and achievements.</p>
+            <p>This project is a simple task management tool that allows users to add, edit, and delete tasks.</p>
             {isExpanded3 && (
               <div className="project-full-text">
-                <p> This project involved building a dynamic site with responsive design elements, making sure it adapts to various screen sizes, from mobile devices to desktops.</p>
+                <p>It focuses on functionality like sorting tasks by priority or due date and using local storage to persist tasks even after page reloads.</p>
+            
               </div>
             )}
             <span className="read-more-toggle" onClick={toggleReadMore3}>
               {isExpanded3 ? "Read Less" : "Read More"}
             </span>
             <div className="project-tags">
-              <span className="tag">React</span>
+            <span className="tag">React</span>
+              <span className="tag">Node.js</span>
+              <span className="tag">MongoDB</span>
             </div>
             <div className="project-links">
               <a href="#" target="_blank" rel="noopener noreferrer">
@@ -202,7 +206,7 @@ function Project() {
       
       <div className="projects-container">
         {/* Project 4 */}
-        <div className={`project-card ${isExpanded1 ? "expanded" : ""}`}>
+        {/* <div className={`project-card ${isExpanded1 ? "expanded" : ""}`}>
           <img src={todo} alt="UniWing" className="project-image" />
           <div className="project-info">
             <h3>To-Do List </h3>
@@ -226,10 +230,10 @@ function Project() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Project 5 */}
-        <div className={`project-card ${isExpanded2 ? "expanded" : ""}`}>
+        {/* <div className={`project-card ${isExpanded2 ? "expanded" : ""}`}>
           <img src={foodtrackind} alt="Food Tracking" className="project-image" />
           <div className="project-info">
             <h3>WE-CALC</h3>
@@ -257,9 +261,9 @@ GST Calculator: Quickly calculates Goods and Services Tax (GST) on any given amo
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Project 3 */}
+        {/* Project 3
         <div className={`project-card ${isExpanded3 ? "expanded" : ""}`}>
           <img src={vechile} alt="E-Commerce" className="project-image" />
           <div className="project-info">
@@ -283,10 +287,12 @@ GST Calculator: Quickly calculates Goods and Services Tax (GST) on any given amo
               </a>
             </div>
           </div>
-        </div>
-      </div>
+        </div>*/}
+      </div> 
       </section>
     </section>
+    
+    </>
   );
 }
 

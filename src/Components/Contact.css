@@ -1,21 +1,9 @@
-/* Fade-In Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Overall Layout */
 .contact-container {
     background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=1600') no-repeat center center/cover;
     background: linear-gradient(270deg, #4A90E2, #1E3A8A);
     background-size: 400% 400%;
-    animation: gradientMove 6s ease infinite;
+   
 
     position: relative;
     display: flex;
@@ -27,9 +15,6 @@
     padding: 50px 20px;
     text-align: center;
     overflow: hidden;
-
-    /* Apply fade-in animation */
-    animation: fadeIn 1.5s ease-out;
 }
 
 /* Gradient Animation */
@@ -37,35 +22,6 @@
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
-
-/* Floating Animated Icons */
-.contact-container::before, .contact-container::after {
-    content: "";
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: floatAnimation 6s infinite alternate ease-in-out;
-}
-
-.contact-container::before {
-    top: 15%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.contact-container::after {
-    bottom: 10%;
-    right: 15%;
-    animation-delay: 2s;
-}
-
-/* Floating Animation */
-@keyframes floatAnimation {
-    0% { transform: translateY(0px); opacity: 0.8; }
-    100% { transform: translateY(-20px); opacity: 1; }
 }
 
 /* Title */
@@ -80,9 +36,6 @@
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-
-    /* Fade-in effect with slight delay */
-    animation: fadeIn 2s ease-out 0.5s both;
 }
 
 /* Contact Card */
@@ -98,12 +51,31 @@
     gap: 18px;
     width: 90%;
     max-width: 420px;
-    transition: all 0.5s ease-in-out;
-
-    /* Fade-in effect with longer delay */
-    animation: fadeIn 2s ease-out 1s both;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 1s; /* Delay for the card fade-in */
 }
 
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+* Floating Animated Icons */
+.contact-container::before, .contact-container::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: floatAnimation 6s infinite alternate ease-in-out;}
 /* Hover Effect for Contact Card */
 .contact-card:hover {
     background: rgba(255, 255, 255, 0.25);
@@ -127,8 +99,6 @@
     transition: all 0.4s ease-in-out;
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
-
-    /* Individual item fade-in with staggered delay */
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
 }

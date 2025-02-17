@@ -61,7 +61,7 @@ function Education() {
       </div>
 
 
-      <div className="education-card">
+      {/* <div className="education-card">
         <h3>Full-Stack Web Development </h3>
         <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/?couponCode=IND21PM/" target="_blank" rel="noopener noreferrer">
        Udemy Online
@@ -75,7 +75,7 @@ function Education() {
           </span>
         </div>
         <p>Specialized in Full Stack Development on Udemy with expertise in HTML, CSS, JavaScript, React.js, and Node.js.</p>
-      </div>
+      </div> */}
     </div>
 
   );

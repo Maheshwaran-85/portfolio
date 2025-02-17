@@ -54,10 +54,10 @@ function Skill() {
         <img src={fire} alt="FIRE BASE" className="html-icon" />
         <h1 className="html-title">FIRE BASE</h1>
       </div>
-      <div className="html-card">
+      {/* <div className="html-card">
         <img src={Reactb} alt="REACT BOOTSTRAP" className="html-icon" />
         <h1 className="html-title">REACT BOOTSTRAP</h1>
-      </div>
+      </div> */}
       <div className="html-card">
         <img src={Mui} alt="MUI" className="html-icon" />
         <h1 className="html-title">MUI</h1>

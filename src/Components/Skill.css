@@ -8,7 +8,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  background: linear-gradient(135deg, #4A90E2, #76B3FA); 
+  background: linear-gradient(270deg, #4A90E2, #1E3A8A);
   /* background-color: black; */
   justify-content: center;
   padding: 60px;
@@ -34,7 +34,7 @@ html, body {
 .html-card:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, #ff7e5f, #ffba80);
+  background: linear-gradient(270deg, #FEC260, #FF6B6B);
   /* background: linear-gradient(135deg, #42e695, #3bb2b8); */
   ;
 

@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
-  background-color: #f8f9fa;
+  background: linear-gradient(270deg, #4A90E2, #1E3A8A);
 }
 
 /* Titles */
@@ -14,12 +14,12 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #222;
+  color: #ffffff;
 }
 
 .section-subtitle {
   font-size: 1.2rem;
-  color: #555;
+  color: #fff2f2;
   margin-bottom: 2rem;
 }
 

@@ -86,7 +86,7 @@ justify-content: space-around;
 /* Styling for the navigation container */
 
 .nav-Main-Conatiner{
-  background-color: aqua;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -223,3 +223,18 @@ justify-content: space-around;
     display: block;
   }
 }
+@media screen and (min-width: 678px) and (max-width: 993px) {
+  .nav-links1, .nav-links2 {
+    position: relative;
+  }
+  
+  .nav-links1 img, .nav-links2 img {
+    width: 20px; 
+    margin-right: 8px;
+  }
+
+  .nav-links1, .nav-links2 {
+    padding: 10px;
+  }
+}
+
